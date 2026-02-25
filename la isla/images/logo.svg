@@ -6,42 +6,53 @@
             .logo-text {
                 font-family: 'Rye', serif;
                 font-size: 85px;
-                fill: #39ff14;
-                filter: drop-shadow(0px 0px 5px rgba(57, 255, 20, 0.6));
-                stroke: #125e04;
-                stroke-width: 1px;
+                fill: url(#goldGradient);
+                filter: drop-shadow(0px 4px 15px rgba(234, 179, 8, 0.4));
+                stroke: #fffbeb;
+                stroke-width: 0.5px;
             }
             .logo-shape {
-                fill: #39ff14;
-                filter: drop-shadow(0px 0px 5px rgba(57, 255, 20, 0.6));
+                fill: url(#greenGradient);
+                filter: drop-shadow(0px 4px 15px rgba(20, 83, 45, 0.6));
             }
             .logo-highlight {
-                fill: #85ff6e; /* un verde ancora più chiaro per dare tridimensionalità */
+                fill: url(#lightGreenGradient);
             }
             .logo-darken {
-                 fill: #1a9e03; /* scuro per simulare l'ombra del cactus */
+                 fill: #064e3b;
+            }
+            .thorn {
+                fill: #fef08a;
             }
         </style>
         
-        <!-- Glow filter extra neon -->
-        <filter id="neonGlow" x="-50%" y="-50%" width="200%" height="200%">
-            <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-            <feMerge>
-                <feMergeNode in="coloredBlur"/>
-                <feMergeNode in="SourceGraphic"/>
-            </feMerge>
-        </filter>
+        <!-- Tequila Gold Gradient for Text and Line -->
+        <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#fde047" />
+            <stop offset="50%" stop-color="#eab308" />
+            <stop offset="100%" stop-color="#ca8a04" />
+        </linearGradient>
+        
+        <!-- Deep Agave Green for Cactus -->
+        <linearGradient id="greenGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#22c55e" />
+            <stop offset="100%" stop-color="#14532d" />
+        </linearGradient>
+
+        <linearGradient id="lightGreenGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#4ade80" />
+            <stop offset="100%" stop-color="#166534" />
+        </linearGradient>
     </defs>
     
-    <!-- Base text with glow filter applied directly or through styles -->
-    <text x="10" y="110" class="logo-text" filter="url(#neonGlow)">La isla</text>
+    <!-- Base text with gold gradient -->
+    <text x="10" y="110" class="logo-text">La isla</text>
     
-    <!-- Underline with subtle inner shadow / dark edge -->
-    <rect x="5" y="115" width="460" height="7" class="logo-shape" filter="url(#neonGlow)"/>
-    <rect x="5" y="120" width="460" height="2" class="logo-darken"/>
+    <!-- Underline -->
+    <rect x="5" y="115" width="460" height="4" fill="url(#goldGradient)" rx="2"/>
     
-    <!-- Group for Cactus to apply the filter to the whole shape -->
-    <g filter="url(#neonGlow)">
+    <!-- Group for Cactus -->
+    <g>
         <!-- Main Cactus Base -->
         <path class="logo-shape" d="M 360 115 L 360 30 C 360 15, 385 15, 385 30 L 385 115 Z"/>
         <!-- Main Cactus shadow/highlight -->
@@ -65,11 +76,13 @@
         <path class="logo-highlight" d="M 425 115 L 425 80 C 425 70, 430 70, 430 80 L 430 115 Z"/>
         
         <!-- Thorns detail -->
-        <path fill="#ffffff" d="M 330 40 L 333 41 L 331 43 Z"/>
-        <path fill="#ffffff" d="M 370 20 L 372 17 L 373 20 Z"/>
-        <path fill="#ffffff" d="M 405 50 L 408 48 L 406 52 Z"/>
-        <path fill="#ffffff" d="M 440 70 L 442 67 L 444 70 Z"/>
-        <path fill="#ffffff" d="M 362 50 L 365 48 L 363 51 Z"/>
-        <path fill="#ffffff" d="M 378 80 L 380 77 L 379 81 Z"/>
+        <g class="thorn">
+            <path d="M 330 40 L 333 41 L 331 43 Z"/>
+            <path d="M 370 20 L 372 17 L 373 20 Z"/>
+            <path d="M 405 50 L 408 48 L 406 52 Z"/>
+            <path d="M 440 70 L 442 67 L 444 70 Z"/>
+            <path d="M 362 50 L 365 48 L 363 51 Z"/>
+            <path d="M 378 80 L 380 77 L 379 81 Z"/>
+        </g>
     </g>
 </svg>
