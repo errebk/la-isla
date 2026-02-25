@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 150" width="100%" height="100%">
+    <defs>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Rye&amp;display=swap');
+            
+            .logo-text {
+                font-family: 'Rye', serif;
+                font-size: 85px;
+                fill: #39ff14;
+                filter: drop-shadow(0px 0px 5px rgba(57, 255, 20, 0.6));
+                stroke: #125e04;
+                stroke-width: 1px;
+            }
+            .logo-shape {
+                fill: #39ff14;
+                filter: drop-shadow(0px 0px 5px rgba(57, 255, 20, 0.6));
+            }
+            .logo-highlight {
+                fill: #85ff6e; /* un verde ancora più chiaro per dare tridimensionalità */
+            }
+            .logo-darken {
+                 fill: #1a9e03; /* scuro per simulare l'ombra del cactus */
+            }
+        </style>
+        
+        <!-- Glow filter extra neon -->
+        <filter id="neonGlow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+            <feMerge>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+    </defs>
+    
+    <!-- Base text with glow filter applied directly or through styles -->
+    <text x="10" y="110" class="logo-text" filter="url(#neonGlow)">La isla</text>
+    
+    <!-- Underline with subtle inner shadow / dark edge -->
+    <rect x="5" y="115" width="460" height="7" class="logo-shape" filter="url(#neonGlow)"/>
+    <rect x="5" y="120" width="460" height="2" class="logo-darken"/>
+    
+    <!-- Group for Cactus to apply the filter to the whole shape -->
+    <g filter="url(#neonGlow)">
+        <!-- Main Cactus Base -->
+        <path class="logo-shape" d="M 360 115 L 360 30 C 360 15, 385 15, 385 30 L 385 115 Z"/>
+        <!-- Main Cactus shadow/highlight -->
+        <path class="logo-darken" d="M 380 115 L 380 30 C 380 20, 385 15, 385 30 L 385 115 Z"/>
+        <path class="logo-highlight" d="M 360 115 L 360 30 C 360 20, 365 20, 365 30 L 365 115 Z"/>
+        
+        <!-- Left Arm -->
+        <path class="logo-shape" d="M 360 70 C 340 70, 335 60, 335 45 L 335 35 
+                                      C 335 25, 355 25, 355 35 L 355 50 C 355 55, 358 58, 360 58 Z"/>
+        <path class="logo-highlight" d="M 335 45 L 335 35 C 335 25, 340 25, 340 35 L 340 45 Z"/>
+        
+        <!-- Right Arm -->
+        <path class="logo-shape" d="M 385 85 C 405 85, 410 75, 410 60 L 410 45 
+                                      C 410 35, 390 35, 390 45 L 390 60 C 390 65, 388 68, 385 68 Z"/>
+        <path class="logo-darken" d="M 410 60 L 410 45 C 410 35, 405 35, 405 45 L 405 60 Z"/>
+
+        <!-- Small Cactus Base -->
+        <path class="logo-shape" d="M 425 115 L 425 80 C 425 65, 455 65, 455 80 L 455 115 Z"/>
+        <!-- Small Cactus shadow/highlight -->
+        <path class="logo-darken" d="M 450 115 L 450 80 C 450 70, 455 65, 455 80 L 455 115 Z"/>
+        <path class="logo-highlight" d="M 425 115 L 425 80 C 425 70, 430 70, 430 80 L 430 115 Z"/>
+        
+        <!-- Thorns detail -->
+        <path fill="#ffffff" d="M 330 40 L 333 41 L 331 43 Z"/>
+        <path fill="#ffffff" d="M 370 20 L 372 17 L 373 20 Z"/>
+        <path fill="#ffffff" d="M 405 50 L 408 48 L 406 52 Z"/>
+        <path fill="#ffffff" d="M 440 70 L 442 67 L 444 70 Z"/>
+        <path fill="#ffffff" d="M 362 50 L 365 48 L 363 51 Z"/>
+        <path fill="#ffffff" d="M 378 80 L 380 77 L 379 81 Z"/>
+    </g>
+</svg>
