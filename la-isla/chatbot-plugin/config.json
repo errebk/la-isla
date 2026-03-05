@@ -1,0 +1,16 @@
+{
+  "botName": "IslaBot",
+  "welcomeMessage": "Hola! 👋 Benvenuto a LA ISLA. Sono l'assistente virtuale del locale, chiedimi informazioni su orari, eventi o menu!",
+  "knowledgeBase": {
+    "orario": ["orari", "apertura", "chiusura", "aperti", "ora", "quando aprite", "quando aperti"],
+    "menu": ["menu", "cibo", "mangiare", "cena", "piatti", "carne", "drink", "cocktail", "prezzi", "bere"],
+    "eventi": ["eventi", "musica", "cantare", "serate", "karaoke", "live", "sabato", "venerdì", "giovedì"],
+    "contatti": ["telefono", "chiamare", "dove siete", "indirizzo", "prenotare", "prenotazioni", "via"]
+  },
+  "answers": {
+    "orario": "Siamo aperti tutti i giorni! 🎉 Ti aspettiamo per Colazione, un gustoso Pranzo, Aperitivo o una fantastica Cena Italo-Mex.",
+    "menu": "Il nostro menu unisce i sapori di Italia e Messico! 🌮 Serviamo Fajitas calde, gustosi Tacos, succulente Costine Barbacoa e una ricchissima selezione di Cocktail.",
+    "eventi": "All'Isla non ci si annoia mai! 🎸<br>Le nostre serate principali:<br>• <strong>Giovedì</strong>: Karaoke Show 🎤<br>• <strong>Venerdì</strong>: Serata Latina (Salsa e Reggaeton) 💃<br>• <strong>Sabato</strong>: Live Music con band! 🎶",
+    "contatti": "Vuoi venirci a trovare o prenotare? 📍 Siamo in <strong>Via A. Cechov 1, San Giuliano Milanese (MI)</strong>.<br>Per tavoli, chiamaci al <a href='tel:+393666644093'>+39 366 664 4093</a>."
+  }
+}

@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 150" width="100%" height="100%">
+    <defs>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Rye&amp;display=swap');
+            
+            .logo-text {
+                font-family: 'Rye', serif;
+                font-size: 85px;
+                fill: url(#goldGradient);
+                filter: drop-shadow(0px 4px 15px rgba(234, 179, 8, 0.4));
+                stroke: #fffbeb;
+                stroke-width: 0.5px;
+            }
+            .logo-shape {
+                fill: url(#greenGradient);
+                filter: drop-shadow(0px 4px 15px rgba(20, 83, 45, 0.6));
+            }
+            .logo-highlight {
+                fill: url(#lightGreenGradient);
+            }
+            .logo-darken {
+                 fill: #064e3b;
+            }
+            .thorn {
+                fill: #fef08a;
+            }
+        </style>
+        
+        <!-- Tequila Gold Gradient for Text and Line -->
+        <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#fde047" />
+            <stop offset="50%" stop-color="#eab308" />
+            <stop offset="100%" stop-color="#ca8a04" />
+        </linearGradient>
+        
+        <!-- Deep Agave Green for Cactus -->
+        <linearGradient id="greenGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#22c55e" />
+            <stop offset="100%" stop-color="#14532d" />
+        </linearGradient>
+
+        <linearGradient id="lightGreenGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#4ade80" />
+            <stop offset="100%" stop-color="#166534" />
+        </linearGradient>
+    </defs>
+    
+    <!-- Base text with gold gradient -->
+    <text x="10" y="110" class="logo-text">La isla</text>
+    
+    <!-- Underline -->
+    <rect x="5" y="115" width="460" height="4" fill="url(#goldGradient)" rx="2"/>
+    
+    <!-- Group for Cactus -->
+    <g>
+        <!-- Main Cactus Base -->
+        <path class="logo-shape" d="M 360 115 L 360 30 C 360 15, 385 15, 385 30 L 385 115 Z"/>
+        <!-- Main Cactus shadow/highlight -->
+        <path class="logo-darken" d="M 380 115 L 380 30 C 380 20, 385 15, 385 30 L 385 115 Z"/>
+        <path class="logo-highlight" d="M 360 115 L 360 30 C 360 20, 365 20, 365 30 L 365 115 Z"/>
+        
+        <!-- Left Arm -->
+        <path class="logo-shape" d="M 360 70 C 340 70, 335 60, 335 45 L 335 35 
+                                      C 335 25, 355 25, 355 35 L 355 50 C 355 55, 358 58, 360 58 Z"/>
+        <path class="logo-highlight" d="M 335 45 L 335 35 C 335 25, 340 25, 340 35 L 340 45 Z"/>
+        
+        <!-- Right Arm -->
+        <path class="logo-shape" d="M 385 85 C 405 85, 410 75, 410 60 L 410 45 
+                                      C 410 35, 390 35, 390 45 L 390 60 C 390 65, 388 68, 385 68 Z"/>
+        <path class="logo-darken" d="M 410 60 L 410 45 C 410 35, 405 35, 405 45 L 405 60 Z"/>
+
+        <!-- Small Cactus Base -->
+        <path class="logo-shape" d="M 425 115 L 425 80 C 425 65, 455 65, 455 80 L 455 115 Z"/>
+        <!-- Small Cactus shadow/highlight -->
+        <path class="logo-darken" d="M 450 115 L 450 80 C 450 70, 455 65, 455 80 L 455 115 Z"/>
+        <path class="logo-highlight" d="M 425 115 L 425 80 C 425 70, 430 70, 430 80 L 430 115 Z"/>
+        
+        <!-- Thorns detail -->
+        <g class="thorn">
+            <path d="M 330 40 L 333 41 L 331 43 Z"/>
+            <path d="M 370 20 L 372 17 L 373 20 Z"/>
+            <path d="M 405 50 L 408 48 L 406 52 Z"/>
+            <path d="M 440 70 L 442 67 L 444 70 Z"/>
+            <path d="M 362 50 L 365 48 L 363 51 Z"/>
+            <path d="M 378 80 L 380 77 L 379 81 Z"/>
+        </g>
+    </g>
+</svg>
